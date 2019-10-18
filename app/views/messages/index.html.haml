@@ -9,11 +9,17 @@
             name
           .side-header__box__menu
             .side-header__box__menu__new-group
-            = fa_icon 'edit', class:"fa fa-edit"
+              = fa_icon 'edit', class:"fa fa-edit"
             .side-header__box__menu__edit-user
-            = fa_icon 'cog', class:"fa fa-cog"
+              = fa_icon 'cog', class:"fa fa-cog"
 
       .groups
+        .group
+          .group__group-name
+            group-name
+          .group__latest-message
+            まだメッセージがありません
+
         .group
           .group__group-name
             group-name
@@ -27,11 +33,12 @@
           .main-header__left-box__current-group
             current-group
           .main-header__left-box__member-list
-            Member:
+            Member :
             .main-header__left-box__member-list__member
               name
-        .main-header__edit-btn
-          edit
+        %a{}
+          .main-header__edit-btn
+            Edit
 
 
       .messages
@@ -43,13 +50,74 @@
               2019/10/17(Thu)
           .message__text
             text text text text
+
+        .message
+          .message__upper-info
+            .message__upper-info__talker
+              name
+            .message__upper-info__date
+              2019/10/17(Thu)
+          .message__text
+            text text text text
+        .message
+          .message__upper-info
+            .message__upper-info__talker
+              name
+            .message__upper-info__date
+              2019/10/17(Thu)
+          .message__text
+            text text text text
+
+        .message
+          .message__upper-info
+            .message__upper-info__talker
+              name
+            .message__upper-info__date
+              2019/10/17(Thu)
+          .message__text
+            text text text text
+        .message
+          .message__upper-info
+            .message__upper-info__talker
+              name
+            .message__upper-info__date
+              2019/10/17(Thu)
+          .message__text
+            text text text text
+
+        .message
+          .message__upper-info
+            .message__upper-info__talker
+              name
+            .message__upper-info__date
+              2019/10/17(Thu)
+          .message__text
+            text text text text
+        .message
+          .message__upper-info
+            .message__upper-info__talker
+              name
+            .message__upper-info__date
+              2019/10/17(Thu)
+          .message__text
+            text text text text
+
+        .message
+          .message__upper-info
+            .message__upper-info__talker
+              name
+            .message__upper-info__date
+              2019/10/17(Thu)
+          .message__text
+            text text text text
+
       .form
+
         .new_message
           .input-box
-            .input-box__text
-              type a message
+            %input.input-box__text{:placeholder => "type a message",:type => "text"}
             .input-box__image
               = fa_icon 'image', class:"fa fa-image"
+              .input-box__image__file
 
-          .submit-btn
-            Send
+          %input.submit-btn{:type => "submit",:value => "Send"}
