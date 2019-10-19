@@ -1,4 +1,5 @@
 $w:white;
+$f:#ffffff;
 
 *{
   box-sizing: border-box;
@@ -14,6 +15,9 @@ $w:white;
   font-weight: lighter;
   text-align: center;
   width: 100vw;
+  .notice{
+    background-color: #38aef0;
+  }
 }
 
 
@@ -35,6 +39,9 @@ $w:white;
       width: 100%;
       font-weight: bold;
       &__user-name{
+        font-size: 16px;
+        font-weight: bold;
+        color: $f;
       }
       &__menu{
         display: flex;
@@ -63,10 +70,14 @@ $w:white;
       margin-bottom: 40px;
       &__group-name{
         font-size: 15px;
+        font-weight: bold;
+        color: $f;
         margin-bottom: 5px;
       }
       &__latest-message{
         font-size: 11px;
+        font-weight: bold;
+        color: $f;
       }
     }
   }
@@ -83,13 +94,13 @@ $w:white;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px #eee;
+    border-bottom: solid 1px #eeeeee;
     overflow: scroll;
     &__left-box{
       margin-top: 35px;
       &__current-group{
         font-size: 20px;
-        color: #333;
+        color: #333333;
         margin-bottom: 15px;
       }
       &__member-list{
@@ -153,6 +164,7 @@ $w:white;
           height: 50px;
           width: 100%;
           padding: 0 40px 0 10px;
+          font-size: 16px;
           color: #434a54;
           border-style: none;
         }
