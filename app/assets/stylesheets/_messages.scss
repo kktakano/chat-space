@@ -42,10 +42,15 @@
         display: flex;
         &__new-group{
           margin-left: 0.3rem;
-    
+          .fa{
+            color: white;
+          }
         }
         &__edit-user{
           margin-left: 0.3rem;
+          .fa{
+            color: white;
+          }
         }
       }
     }
