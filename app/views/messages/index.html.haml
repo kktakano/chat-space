@@ -42,8 +42,8 @@
       .form
         .new_message
           .input-box
-            %input.input-box__text{:placeholder => "type a message",:type => "text"}
+            %input.input-box__text{placeholder: "type a message",type: "text"}
             %label.input-box__image
               = fa_icon'image'
               = file_field :image, id: "message_image"
-          %input.submit-btn{:type => "submit",:value => "Send"}
+          %input.submit-btn{type: "submit",value: "Send"}
