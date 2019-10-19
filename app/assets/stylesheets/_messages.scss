@@ -1,4 +1,4 @@
-
+$w:white;
 
 *{
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 }
 
 .flash-box{
-  color: white;
+  color: $w;
   font-size: 1rem;
   font-weight: lighter;
   text-align: center;
@@ -19,7 +19,7 @@
 
 .chat-side{
   width: 300px;
-  color: white;
+  color: $w;
   float: left;
 
 
@@ -41,13 +41,13 @@
         &__new-group{
           margin-left: 0.3rem;
           .fa{
-            color: white;
+            color: $w;
           }
         }
         &__edit-user{
           margin-left: 0.3rem;
           .fa{
-            color: white;
+            color: $w;
           }
         }
       }
@@ -173,7 +173,7 @@
         padding: 0 30px;
         margin-left: 15px;
         background-color: #38aef0;
-        color: white;
+        color: $w;
         cursor: pointer;
       }
     }
