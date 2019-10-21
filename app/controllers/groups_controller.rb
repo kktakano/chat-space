@@ -17,7 +17,6 @@ class GroupsController < ApplicationController
     end
   end
 
-  end
 
   def update
     if @group.update(group_params)
