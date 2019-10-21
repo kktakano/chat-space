@@ -3,17 +3,17 @@
     .side-header__box
       %h3.side-header__box__user-name
         = current_user.name
-      .side-header__box__menu
-        .side-header__box__menu__new-group
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
           = link_to new_group_path do
             = fa_icon 'edit', class:"fa fa-edit"
-        .side-header__box__menu__edit-user
+        %li.side-header__box__menu__edit-user
           = link_to edit_user_path(current_user) do
             = fa_icon 'cog', class:"fa fa-cog"
   .groups
     .group
       - current_user.groups.each do |group|
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group__name
             = group.name
           .group__message
