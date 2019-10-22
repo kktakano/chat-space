@@ -1,64 +1,11 @@
 .message
   .message__upper-info
-    .message__upper-info__talker
-      name
+    .message__upper-info__tolker
+      = message.user.name
     .message__upper-info__date
-      2019/10/17(Thu)
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
   .message__text
-    text text text t
-.message
-  .message__upper-info
-    .message__upper-info__talker
-      name
-    .message__upper-info__date
-      2019/10/17(Thu)
-  .message__text
-    text text text text
-.message
-  .message__upper-info
-    .message__upper-info__talker
-      name
-    .message__upper-info__date
-      2019/10/17(Thu)
-  .message__text
-    text text text t
-.message
-  .message__upper-info
-    .message__upper-info__talker
-      name
-    .message__upper-info__date
-      2019/10/17(Thu)
-  .message__text
-    text text text text
-.message
-  .message__upper-info
-    .message__upper-info__talker
-      name
-    .message__upper-info__date
-      2019/10/17(Thu)
-  .message__text
-    text text text t
-.message
-  .message__upper-info
-    .message__upper-info__talker
-      name
-    .message__upper-info__date
-      2019/10/17(Thu)
-  .message__text
-    text text text text
-.message
-  .message__upper-info
-    .message__upper-info__talker
-      name
-    .message__upper-info__date
-      2019/10/17(Thu)
-  .message__text
-    text text text t
-.message
-  .message__upper-info
-    .message__upper-info__talker
-      name
-    .message__upper-info__date
-      2019/10/17(Thu)
-  .message__text
-    text text text text
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
