@@ -8,11 +8,12 @@
       .main-header
         .main-header__left-box
           .main-header__left-box__current-group
-            current-group
+            = @group.name
           .main-header__left-box__member-list
             Member :
             .main-header__left-box__member-list__member
-              name
+              -@group.users.each do |user|
+                #{user.name}
         = link_to do
           .main-header__edit-btn
             Edit
