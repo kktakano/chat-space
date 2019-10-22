@@ -20,7 +20,7 @@
 
 
       .messages
-        = render "message"
+        = render @messages
 
       .form
         = form_for [@group, @message] do |f|
