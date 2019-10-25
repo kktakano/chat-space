@@ -38,6 +38,7 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.form__message').val('');
+      $('.messages').scrollTop($(".messages")[0].scrollHeight);
     })
   })
 });
