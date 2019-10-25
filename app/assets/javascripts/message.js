@@ -38,7 +38,13 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.form__message').val('');
+      $('.hidden').val('');
       $('.messages').scrollTop($(".messages")[0].scrollHeight);
+      $('.form__submit').prop('disabled', false);
     })
+    .fail(function() {
+      alert('error');
+      $('.form__submit').prop('disabled', false);
+    });
   })
 });
