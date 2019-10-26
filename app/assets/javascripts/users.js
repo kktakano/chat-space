@@ -42,6 +42,10 @@ document.addEventListener('turbolinks:load', function(){
         alert("ユーザー検索に失敗しました");
       });
     });
+    $(document).on('click', '.user-search-add', function(){
+      var result = $('.user-search-add').data();
+      
+    })
   });
 
   
