@@ -1,5 +1,3 @@
-
-document.addEventListener('turbolinks:load', function(){
   $(function(){
     function buildHTML(message){
       var message_content = message.content?
@@ -49,4 +47,3 @@ document.addEventListener('turbolinks:load', function(){
       });
     })
   });
-});
