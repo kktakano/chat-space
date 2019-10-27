@@ -1,4 +1,3 @@
-document.addEventListener('turbolinks:load', function(){
   $(function(){
 
     var search_list = $("#user-search-result")
@@ -21,7 +20,7 @@ document.addEventListener('turbolinks:load', function(){
                     <p class="chat-group-user__name">${name}</p>
                     <div class="user-search-remove chat-group-user__btn chat-group-user__btn--add" data-user-id="${id}" data-user-name="${name}">削除</div>
                   </div>`;
-      $(".js-add-user").append(html);
+      $("#add-delete-user").append(html);
     }
     function addMember(userId){
       var html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
@@ -69,4 +68,3 @@ document.addEventListener('turbolinks:load', function(){
   });
 
   
-});
